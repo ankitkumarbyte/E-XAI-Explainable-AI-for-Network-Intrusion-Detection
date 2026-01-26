@@ -1,133 +1,103 @@
-🔐 E-XAI: Explainable AI for Network Intrusion Detection
+# 🔐 E-XAI: Explainable AI for Network Intrusion Detection
 
-An explainable, high-performance intrusion detection framework evaluating black-box machine learning models using SHAP and LIME.
-📄 Based on a peer-reviewed research paper published at an international conference 
+An explainable, high-performance intrusion detection framework that evaluates black-box machine learning models using SHAP and LIME for transparent and trustworthy security analytics.
 
-ICDSA_2025_PID_1804_EXAI
+📄 **This project is based on a peer-reviewed research paper published at an international conference (ICDSA 2025).**
 
-📌 Overview
+---
 
-Traditional AI-based Intrusion Detection Systems (IDS) often operate as black boxes, making it difficult for security analysts to understand why a prediction was made. This project introduces E-XAI, a comprehensive framework that:
+## 📌 About the Project
 
-Evaluates multiple black-box ML and ensemble models
+Artificial Intelligence–based Intrusion Detection Systems (IDS) often achieve high accuracy but suffer from a lack of interpretability, making them difficult to trust in real-world security environments.
 
-Applies Explainable AI (XAI) techniques (SHAP, LIME)
+**E-XAI** addresses this problem by combining:
+- High-performing **black-box ML and ensemble models**
+- **Explainable AI (XAI)** techniques for interpretability
+- Multi-dataset evaluation to ensure robustness and generalization
 
-Provides transparent, human-interpretable explanations
+This repository contains the **official implementation and experiments** corresponding to the published research paper.
 
-Achieves state-of-the-art accuracy across benchmark IDS datasets
+---
 
-This repository is the official implementation of the research paper:
+## 🧠 Research Publication
 
-“E-XAI: Evaluating Black-Box Explainable AI Frameworks for Network Intrusion Detection”
-Published at ICDSA 2025 
+**E-XAI: Evaluating Black-Box Explainable AI Frameworks for Network Intrusion Detection**  
+📍 *International Conference on Data Science and Applications (ICDSA 2025)*
 
-ICDSA_2025_PID_1804_EXAI
+### Key highlights from the paper:
+- Comprehensive evaluation of black-box ML models for IDS
+- Integration of SHAP and LIME for model explainability
+- Ensemble Voting Classifier achieving state-of-the-art results
+- Strong generalization across multiple benchmark datasets
 
-🧠 Key Contributions
+---
 
-✅ Comparative evaluation of black-box ML models for IDS
+## 📊 Datasets Used
 
-✅ Integration of Explainable AI (XAI) to improve trust and transparency
+This project evaluates intrusion detection performance on three standard datasets:
 
-✅ Multi-dataset validation for robustness and generalization
+- **CIC-IDS 2017** – Realistic modern network traffic with diverse attack types  
+- **NSL-KDD** – Improved benchmark dataset with reduced redundancy  
+- **SIMARGL 2021** – High-quality bidirectional flow-based intrusion dataset  
 
-✅ High-performance ensemble Voting Classifier (Boosted DT + Bagging RF)
+---
 
-✅ Real-world relevance for Security Operations Centers (SOC)
+## ⚙️ Models Implemented
 
-📊 Datasets Used
+- Deep Neural Network (DNN)
+- Multi-Layer Perceptron (MLP)
+- Random Forest
+- LightGBM
+- Support Vector Machine (SVM)
+- K-Nearest Neighbors (KNN)
+- AdaBoost
+- **Ensemble Voting Classifier (Boosted Decision Trees + Bagging Random Forest)**
 
-The framework is evaluated on three widely used intrusion detection benchmarks:
+---
 
-Dataset	Description
-CIC-IDS 2017	Modern network traffic with diverse attack scenarios
-NSL-KDD	Improved version of KDD’99 with reduced redundancy
-SIMARGL 2021	High-quality bidirectional flow-based intrusion data
-⚙️ Models Implemented
+## 🧪 Explainable AI Techniques
 
-Deep Neural Networks (DNN)
+To interpret black-box predictions, the following XAI methods are used:
 
-Multi-Layer Perceptron (MLP)
+- **SHAP (SHapley Additive Explanations)**  
+  - Global and local feature importance
+- **LIME (Local Interpretable Model-Agnostic Explanations)**  
+  - Instance-level explanations for individual predictions
 
-Random Forest
+These techniques help security analysts understand *why* a flow is classified as benign or malicious.
 
-LightGBM
+---
 
-Support Vector Machine (SVM)
+## 📈 Results Summary
 
-K-Nearest Neighbors (KNN)
+The ensemble **Voting Classifier** achieved the best performance across all datasets:
 
-AdaBoost
+| Dataset | Accuracy | Precision | Recall | F1-Score |
+|------|---------|----------|-------|---------|
+| CIC-IDS 2017 | 97.9% | 98.1% | 97.9% | 98.0% |
+| NSL-KDD | 99.4% | 99.4% | 99.4% | 99.4% |
+| SIMARGL 2021 | 100% | 100% | 100% | 100% |
 
-🔥 Voting Classifier (Boosted Decision Trees + Bagging Random Forest)
+These results demonstrate excellent robustness, generalization, and real-world applicability.
 
-🧪 Explainability Techniques
+---
 
-To interpret black-box predictions, the following XAI methods are applied:
+## 🖥️ System Pipeline
 
-SHAP (SHapley Additive Explanations)
-→ Global & local feature importance
+1. Dataset Collection  
+2. Data Preprocessing & Feature Engineering  
+3. Model Training and Validation (80:20 split)  
+4. Ensemble Learning  
+5. Explainability Analysis (SHAP / LIME)  
+6. Performance Evaluation (Accuracy, Precision, Recall, F1-score, ROC-AUC)
 
-LIME (Local Interpretable Model-Agnostic Explanations)
-→ Instance-level explanations for analyst decision support
+---
 
-These explanations help security analysts understand:
-
-Which features influenced a prediction
-
-Why a network flow was classified as malicious or benign
-
-📈 Results Summary
-
-The ensemble Voting Classifier consistently outperformed other models:
-
-Dataset	Accuracy	Precision	Recall	F1-Score
-CIC-IDS 2017	97.9%	98.1%	97.9%	98.0%
-NSL-KDD	99.4%	99.4%	99.4%	99.4%
-SIMARGL 2021	100%	100%	100%	100%
-
-📌 Results confirm excellent generalization, robustness, and real-world applicability 
-
-ICDSA_2025_PID_1804_EXAI
-
-🖥️ System Pipeline
-
-Data Collection
-
-Data Preprocessing & Feature Engineering
-
-Model Training & Validation (80:20 split)
-
-Ensemble Learning
-
-Explainability Analysis (SHAP / LIME)
-
-Performance Evaluation (Accuracy, Precision, Recall, F1, ROC-AUC)
-
-🧾 Publication
+## 🧾 Citation
 
 If you use this work, please cite:
 
+```text
 Ankit Kumar et al.,
 "E-XAI: Evaluating Black-Box Explainable AI Frameworks for Network Intrusion Detection",
 Proceedings of ICDSA 2025.
-
-
-📄 Paper included in this repository 
-
-ICDSA_2025_PID_1804_EXAI
-
-👨‍💻 Author
-
-Ankit Kumar
-M.S. Artificial Intelligence, Brandenburg University of Technology
-AI Researcher | Explainable AI | Network Security
-
-🔗 LinkedIn: https://www.linkedin.com/in/ankit-kumar
-
-⭐ Why This Matters
-
-This project bridges the gap between high-accuracy AI models and human trust, making it suitable for deployment in real-world cybersecurity environments.
-
-If you find this project useful, consider ⭐ starring the repo!
